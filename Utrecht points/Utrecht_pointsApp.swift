@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Utrecht_pointsApp: App {
+    @StateObject private var locationsViewModel = LocationsViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LocationsView()
+                .environmentObject(locationsViewModel)
         }
     }
 }
