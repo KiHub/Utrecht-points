@@ -17,6 +17,8 @@
 		0B552CD4291988C100F4764C /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B552CD3291988C100F4764C /* LocationsViewModel.swift */; };
 		0B552CD6291A7E5B00F4764C /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B552CD5291A7E5B00F4764C /* LocationsListView.swift */; };
 		0B552CD8291AC2F800F4764C /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B552CD7291AC2F700F4764C /* LocationPreviewView.swift */; };
+		0B552CDA291BB66000F4764C /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B552CD9291BB65F00F4764C /* LocationDetailView.swift */; };
+		0B552CDC291BC8DA00F4764C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B552CDB291BC8DA00F4764C /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		0B552CD3291988C100F4764C /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		0B552CD5291A7E5B00F4764C /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 		0B552CD7291AC2F700F4764C /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
+		0B552CD9291BB65F00F4764C /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		0B552CDB291BC8DA00F4764C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				0B552CD1291982D600F4764C /* LocationsView.swift */,
+				0B552CD9291BB65F00F4764C /* LocationDetailView.swift */,
 				0B552CD7291AC2F700F4764C /* LocationPreviewView.swift */,
 				0B552CD5291A7E5B00F4764C /* LocationsListView.swift */,
 			);
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				0B552CCF2919808200F4764C /* LocationService.swift */,
+				0B552CDB291BC8DA00F4764C /* LocationManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -189,6 +195,8 @@
 			files = (
 				0B552CCD29197F8400F4764C /* Location.swift in Sources */,
 				0B552CD6291A7E5B00F4764C /* LocationsListView.swift in Sources */,
+				0B552CDC291BC8DA00F4764C /* LocationManager.swift in Sources */,
+				0B552CDA291BB66000F4764C /* LocationDetailView.swift in Sources */,
 				0B552CD4291988C100F4764C /* LocationsViewModel.swift in Sources */,
 				0B552CBC29197E5C00F4764C /* ContentView.swift in Sources */,
 				0B552CD8291AC2F800F4764C /* LocationPreviewView.swift in Sources */,
@@ -326,6 +334,7 @@
 				DEVELOPMENT_TEAM = 327B2F3V2J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need location to see user's locationn";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -355,6 +364,7 @@
 				DEVELOPMENT_TEAM = 327B2F3V2J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need location to see user's locationn";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -23,14 +23,16 @@ class LocationsViewModel: ObservableObject {
     
     @Published var showLocationsList: Bool = false
     
+    //show detail view sheet
+    @Published var sheetLocation: Location? = nil
     
     init() {
         let locations = LocationService.locations
         self.locations = locations
         self.mapLocation = locations.first!
-        
         self.updateRegion(location: locations.first!)
     }
+    
     private func updateRegion(location: Location) {
         withAnimation(.easeInOut) {
             mapRegion = MKCoordinateRegion(center: location.coordinates, span: mapSpan)

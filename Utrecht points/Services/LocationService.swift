@@ -16,7 +16,8 @@ class LocationService {
             coordinates: CLLocationCoordinate2D(latitude: 52.0863621022926, longitude: 5.122200182266086),
             description: "Utreg of Utereg) is een stad en gemeente in Nederland en de hoofdstad van de provincie Utrecht. Met 361.924 inwoners op 31 januari 2022 is Utrecht qua inwonertal de vierde gemeente van Nederland. Deze inwoners zijn verdeeld over vier woonplaatsen, te weten Utrecht met 308.965, Haarzuilens met 555, Vleuten met 27.810 en De Meern met 21.815 inwoners. De agglomeratie Utrecht telde per 1 januari 2019 712.700 inwoners.",
             imageNames: [
-                "bridge"
+                "bridge",
+                "bridge-1"
             ]
         ),
         Location(

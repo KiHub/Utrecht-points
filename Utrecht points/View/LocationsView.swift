@@ -11,6 +11,8 @@ import MapKit
 
 struct LocationsView: View {
     
+    @StateObject private var locationManager = LocationManager()
+    
     @EnvironmentObject private var locationsViewModel: LocationsViewModel
     
     var body: some View {
@@ -34,6 +36,9 @@ struct LocationsView: View {
                 }
             }
             
+        }
+        .sheet(item: $locationsViewModel.sheetLocation, onDismiss: nil) { location in
+            LocationDetailView(location: location)
         }
     }
 }
@@ -80,7 +85,7 @@ extension LocationsView {
     }
     
     private var mapView: some View {
-        Map(coordinateRegion: $locationsViewModel.mapRegion, annotationItems: locationsViewModel.locations, annotationContent: { location in
+        Map(coordinateRegion: $locationsViewModel.mapRegion, interactionModes: .all, showsUserLocation: true, annotationItems: locationsViewModel.locations, annotationContent: { location in
             MapAnnotation(coordinate: location.coordinates) {
                 Image("point")
                     .scaleEffect(locationsViewModel.mapLocation == location ? 1.1 : 0.6)
@@ -93,3 +98,4 @@ extension LocationsView {
     }
     
 }
+

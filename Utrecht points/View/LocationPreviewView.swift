@@ -36,8 +36,10 @@ struct LocationPreviewView: View {
 
 struct LocationPreviewView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationPreviewView(location: LocationService.locations.first!)
+        if let loc = LocationService.locations.first {
+        LocationPreviewView(location: loc)
             .environmentObject(LocationsViewModel())
+        }
     }
 }
 
@@ -69,7 +71,7 @@ extension LocationPreviewView {
     
     private var exploreButton: some View {
         Button {
-            
+            locationsViewModel.sheetLocation = location
         } label: {
             Text("Let's explore")
                 .font(.headline)
