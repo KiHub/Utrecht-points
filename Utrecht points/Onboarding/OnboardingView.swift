@@ -32,6 +32,7 @@ struct OnboardingView: View {
                 .font(.title2)
                 .bold()
                 .foregroundColor(Color("AccentColor"))
+                .frame(maxWidth: 300)
 
             Text(data.secondaryText)
                 .font(.headline)
@@ -58,7 +59,7 @@ struct OnboardingView: View {
             })
             .opacity(data.on ? 1.0 : 0.0)
             .shadow(radius: 10)
-
+            Spacer()
             Spacer()
         }
         .onAppear(perform: {
