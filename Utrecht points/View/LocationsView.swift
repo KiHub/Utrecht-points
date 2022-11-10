@@ -11,11 +11,16 @@ import MapKit
 
 struct LocationsView: View {
     
+    @ObservedObject var global = Global()
+    
     @StateObject private var locationManager = LocationManager()
     
     @EnvironmentObject private var locationsViewModel: LocationsViewModel
     
     var body: some View {
+        if global.onboardingOn {
+            OnboardingManager()
+        } else {
         ZStack {
             mapView
                 .ignoresSafeArea()
@@ -23,12 +28,14 @@ struct LocationsView: View {
             VStack(spacing: 0) {
                 header
                     .padding()
+                    .frame(maxWidth: Constants.maxWidthIpad)
                 Spacer()
                 ZStack {
                     ForEach(locationsViewModel.locations) { location in
                         if locationsViewModel.mapLocation == location {
                             LocationPreviewView(location: location)
                                 .shadow(radius: 20)
+                                .frame(maxWidth: Constants.maxWidthIpad)
                                 .transition(.asymmetric(insertion: .move(edge: .top), removal: .move(edge: .bottom)))
                         }
                           
@@ -39,6 +46,7 @@ struct LocationsView: View {
         }
         .sheet(item: $locationsViewModel.sheetLocation, onDismiss: nil) { location in
             LocationDetailView(location: location)
+        }
         }
     }
 }
@@ -87,6 +95,7 @@ extension LocationsView {
     private var mapView: some View {
         Map(coordinateRegion: $locationsViewModel.mapRegion, interactionModes: .all, showsUserLocation: true, annotationItems: locationsViewModel.locations, annotationContent: { location in
             MapAnnotation(coordinate: location.coordinates) {
+              
                 Image("point")
                     .scaleEffect(locationsViewModel.mapLocation == location ? 1.1 : 0.6)
                     .shadow(radius: 5)

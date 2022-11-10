@@ -19,6 +19,11 @@
 		0B552CD8291AC2F800F4764C /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B552CD7291AC2F700F4764C /* LocationPreviewView.swift */; };
 		0B552CDA291BB66000F4764C /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B552CD9291BB65F00F4764C /* LocationDetailView.swift */; };
 		0B552CDC291BC8DA00F4764C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B552CDB291BC8DA00F4764C /* LocationManager.swift */; };
+		0B552CDE291CF56700F4764C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B552CDD291CF56700F4764C /* Constants.swift */; };
+		0B552CE5291D01B200F4764C /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B552CE1291D01B200F4764C /* Global.swift */; };
+		0B552CE6291D01B200F4764C /* OnboardingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B552CE2291D01B200F4764C /* OnboardingManager.swift */; };
+		0B552CE7291D01B200F4764C /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B552CE3291D01B200F4764C /* OnboardingData.swift */; };
+		0B552CE8291D01B200F4764C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B552CE4291D01B200F4764C /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,12 @@
 		0B552CD7291AC2F700F4764C /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
 		0B552CD9291BB65F00F4764C /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		0B552CDB291BC8DA00F4764C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		0B552CDD291CF56700F4764C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0B552CDF291CFB6700F4764C /* Utrecht-points-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Utrecht-points-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0B552CE1291D01B200F4764C /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		0B552CE2291D01B200F4764C /* OnboardingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingManager.swift; sourceTree = "<group>"; };
+		0B552CE3291D01B200F4764C /* OnboardingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
+		0B552CE4291D01B200F4764C /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +78,10 @@
 		0B552CB829197E5C00F4764C /* Utrecht points */ = {
 			isa = PBXGroup;
 			children = (
+				0B552CDF291CFB6700F4764C /* Utrecht-points-Info.plist */,
 				0B552CB929197E5C00F4764C /* Utrecht_pointsApp.swift */,
 				0B552CBB29197E5C00F4764C /* ContentView.swift */,
+				0B552CE0291D01B200F4764C /* Onboarding */,
 				0B552CCE2919804300F4764C /* Services */,
 				0B552CCB29197F6000F4764C /* ViewModel */,
 				0B552CCA29197F5500F4764C /* View */,
@@ -119,8 +132,20 @@
 			children = (
 				0B552CCF2919808200F4764C /* LocationService.swift */,
 				0B552CDB291BC8DA00F4764C /* LocationManager.swift */,
+				0B552CDD291CF56700F4764C /* Constants.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0B552CE0291D01B200F4764C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				0B552CE1291D01B200F4764C /* Global.swift */,
+				0B552CE2291D01B200F4764C /* OnboardingManager.swift */,
+				0B552CE3291D01B200F4764C /* OnboardingData.swift */,
+				0B552CE4291D01B200F4764C /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,12 +219,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B552CCD29197F8400F4764C /* Location.swift in Sources */,
+				0B552CDE291CF56700F4764C /* Constants.swift in Sources */,
 				0B552CD6291A7E5B00F4764C /* LocationsListView.swift in Sources */,
+				0B552CE8291D01B200F4764C /* OnboardingView.swift in Sources */,
 				0B552CDC291BC8DA00F4764C /* LocationManager.swift in Sources */,
+				0B552CE6291D01B200F4764C /* OnboardingManager.swift in Sources */,
 				0B552CDA291BB66000F4764C /* LocationDetailView.swift in Sources */,
+				0B552CE7291D01B200F4764C /* OnboardingData.swift in Sources */,
 				0B552CD4291988C100F4764C /* LocationsViewModel.swift in Sources */,
 				0B552CBC29197E5C00F4764C /* ContentView.swift in Sources */,
 				0B552CD8291AC2F800F4764C /* LocationPreviewView.swift in Sources */,
+				0B552CE5291D01B200F4764C /* Global.swift in Sources */,
 				0B552CD2291982D600F4764C /* LocationsView.swift in Sources */,
 				0B552CD02919808200F4764C /* LocationService.swift in Sources */,
 				0B552CBA29197E5C00F4764C /* Utrecht_pointsApp.swift in Sources */,
@@ -334,12 +364,13 @@
 				DEVELOPMENT_TEAM = 327B2F3V2J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Utrecht-points-Info.plist";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need location to see user's locationn";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -364,12 +395,13 @@
 				DEVELOPMENT_TEAM = 327B2F3V2J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Utrecht-points-Info.plist";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need location to see user's locationn";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
