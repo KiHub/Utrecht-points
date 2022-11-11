@@ -12,38 +12,17 @@ struct LocationPreviewView: View {
     let location: Location
     
     var body: some View {
-//        HStack(alignment: .bottom, spacing: 0) {
-//            VStack(alignment: .leading, spacing: 20) {
-//               imageSection
-//                textSection
-//            }
-//            VStack(spacing: 20) {
-//                exploreButton
-//                nextButton
-//            }
-//
-//        }
         VStack(alignment: .center) {
             imageSection
             textSection
             HStack(alignment: .bottom, spacing: 20) {
                 VStack(alignment: .leading, spacing: 20) {
-                 //  imageSection
                     exploreButton
                 }
                 VStack(alignment: .trailing, spacing: 20) {
-                  //  textSection
                     nextButton
                 }
-               
             }
-//            .padding()
-//            .background(
-//                RoundedRectangle(cornerRadius: 20)
-//                    .fill(.ultraThinMaterial)
-//                    .offset(y: 50)
-//                )
-//            .cornerRadius(20)
         .padding()
         }
         .padding()
