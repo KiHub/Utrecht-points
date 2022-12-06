@@ -16,8 +16,8 @@ struct OnboardingData: Hashable, Identifiable {
     let on: Bool
     
     static let list: [OnboardingData] = [
-        OnboardingData(id: 0, backgroundImage: "path", objectImage: "point1", primaryText: "Are you going to Utrecht?", secondaryText: "", on: false),
-        OnboardingData(id: 1, backgroundImage: "path", objectImage: "point1", primaryText: "We have a list of nice spots", secondaryText: "", on: false),
-        OnboardingData(id: 2, backgroundImage: "path", objectImage: "point1", primaryText: "let's check all spots!", secondaryText: "", on: true)
+        OnboardingData(id: 0, backgroundImage: "", objectImage: "point1", primaryText: "Utrecht is one of the best cities for a weekend trip", secondaryText: "", on: false),
+        OnboardingData(id: 1, backgroundImage: "", objectImage: "point1", primaryText: "We will help you to find the most beautiful city spots ", secondaryText: "", on: false),
+        OnboardingData(id: 2, backgroundImage: "", objectImage: "point1", primaryText: "Let's start a great adventure", secondaryText: "", on: true)
     ]
 }
